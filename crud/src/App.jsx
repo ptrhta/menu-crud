@@ -13,13 +13,11 @@ function App() {
   return(
     <PostsProvider>
      <Router>
-       <Route path="/" exact component={PostsMainView} />
-       <Switch>
-         <Route path="/posts/new" exact component={NewPost} />
-         <Route path="/posts/:id" exact component={PostWithButtons} />
-       </Switch>
-       <Switch>
-         <Route path="/posts/:id/edit" exact component={EditPost} />
+      <Switch>
+        <Route path="/" exact component={PostsMainView} />
+         <Route path="/posts/new" component={NewPost} />
+         <Route path="/posts/:id" component={PostWithButtons} />
+         <Route path="/posts/:id/edit" component={EditPost} />
        </Switch>
      </Router>
     </PostsProvider>
